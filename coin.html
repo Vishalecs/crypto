@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Crypto detail section styles */
+        #crypto-detail {
+            background-color: #ffffff; /* Light gray background */
+            padding: 20px;
+            
+            width: 45%; /* Adjust width as needed */
+            margin-right: 20px; /* Add margin to the right for spacing */
+            height: 300px;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+    
+        .crypto-card {
+            display: flex;
+            align-items: center;
+        }
+    
+        .crypto-image {
+            width: 250px; /* Increased width */
+            height: 250px; /* Increased height */
+            margin-right: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        .crypto-info h2 {
+            margin: 0;
+            font-size: 2rem; /* Increased font size */
+            margin-bottom: 10px;
+        }
+    
+        .crypto-info p {
+            margin: 10px 0;
+            font-size: 1.2rem; /* Increased font size */
+        }
+    
+        /* Chart container styles */
+        .chart-container {
+            width: 50%; /* Adjust width as needed */
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin-left: 20px; /* Add margin to the left for spacing */
+        }
+    
+        #coinChart {
+            width: 100%; /* Make the canvas take up the full width of the container */
+            height: 400px; /* Adjust height as needed */
+        }
+    
+        /* Content container styles */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            margin-top: 40px; /* Increase space below the navbar */
+        }
+    
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    
+        .button-group button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .button-group button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+    
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Crypto Tracker</a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fav.html" class="nav-link">Favorites</a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-box">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="content-container">
+        <div id="crypto-detail">
+            <!-- Example content -->
+            <div class="crypto-card">
+                <img src="https://via.placeholder.com/100" alt="Crypto" class="crypto-image">
+                
+            </div>
+        </div>
+        <div class="chart-container">
+            <div class="button-group">
+                <button onclick="fetchChartData(cryptoId, 1)">24 Hours</button>
+                <button onclick="fetchChartData(cryptoId, 30)">30 Days</button>
+                <button onclick="fetchChartData(cryptoId, 90)">3 Months</button>
+            </div>
+            <canvas id="coinChart"></canvas>
+        </div>
+    </div>
+    <script src="js/coin.js"></script>
+</body>
+</html>

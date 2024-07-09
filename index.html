@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Crypto Tracker</a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="fav.html" class="nav-link">Favorites</a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search..." id="search-box">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Icon</th>
+                <th>Name</th>
+                <th id="price-header">Price
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-down"></i>
+                </th>
+                <th id="volume-header">Volume
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-down"></i>
+                </th>
+                <th>Market Cap</th>
+                <th>Favorites</th>
+            </tr>
+        </thead>
+        <tbody id="crypto-table-body">
+            <!-- Example row structure -->
+            <!-- Replace with dynamic rows generated from JavaScript -->
+        </tbody>
+    </table>
+
+    <div id="pagination" class="pagination">
+        <!-- Pagination buttons will be generated dynamically here -->
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
